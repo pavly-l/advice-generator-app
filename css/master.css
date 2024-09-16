@@ -3,7 +3,7 @@
     --primary-color: hsl(217, 19%, 24%);
     --secondary-color: hsl(218, 23%, 16%);
     --accent-color: hsl(150, 100%, 66%);
-    --text-color: hsl(217, 19%, 38%);
+    --text-color: hsl(219, 74%, 95%);
     --light-text-color: hsl(223, 28%, 85%);
     --link-color: hsl(225, 25%, 94%);
     --font-family: 'Manrope', Arial, sans-serif;
@@ -47,9 +47,20 @@ body {
     margin-top: -1em;
     cursor: pointer;
     margin-bottom: 2em;
+    border: none;
+    outline: none;
 }
 
-.quote-container h1 {
+.dice:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.dice img {
+    pointer-events: none; /* Ensure the image itself is not clickable */
+}
+
+.quote-container h1{
     margin: 0;
     color: var(--accent-color);
     font-size: 1.25rem;
@@ -110,10 +121,4 @@ body {
         padding: 10px;
         margin-bottom: 1em;
     }
-}
-
-/* Accessibility */
-.dice:hover {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
 }
