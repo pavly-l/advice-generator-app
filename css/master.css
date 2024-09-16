@@ -1,0 +1,119 @@
+/* master.css */
+:root {
+    --primary-color: hsl(217, 19%, 24%);
+    --secondary-color: hsl(218, 23%, 16%);
+    --accent-color: hsl(150, 100%, 66%);
+    --text-color: hsl(217, 19%, 38%);
+    --light-text-color: hsl(223, 28%, 85%);
+    --link-color: hsl(225, 25%, 94%);
+    --font-family: 'Manrope', Arial, sans-serif;
+    --border-radius: 10px;
+    --max-width: 600px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding-bottom: 3em;
+    width: 80%;
+    width: var(--max-width);
+}
+
+.dice {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    margin-top: -1em;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+
+.quote-container h1 {
+    margin: 0;
+    color: var(--accent-color);
+    font-size: 1.25rem;
+}
+
+.quote-container p {
+    color: var(--text-color);
+    font-size: 1.75rem;
+    margin-bottom: 1em;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--light-text-color);
+}
+
+.attribution a {
+    color: var(--link-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .quote-container {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    .quote-container h1 {
+        font-size: 1.1rem;
+    }
+
+    .quote-container p {
+        font-size: 1.5rem;
+    }
+
+    .dice {
+        padding: 15px;
+        margin-bottom: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-container {
+        width: 95%;
+        padding: 1em;
+    }
+
+    .quote-container h1 {
+        font-size: 1rem;
+    }
+
+    .quote-container p {
+        font-size: 1.25rem;
+    }
+
+    .dice {
+        padding: 10px;
+        margin-bottom: 1em;
+    }
+}
+
+/* Accessibility */
+.dice:hover {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
